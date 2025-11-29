@@ -5,3 +5,32 @@ GET {{eCommerce.ProductsService.Api_HostAddress}}/api/Product?numFilter=2&textFi
 Accept: application/json
 
 ###
+### Obtener un producto por ID
+GET {{eCommerce.ProductsService.Api_HostAddress}}/api/Product/357f46f1-76f0-47dc-98ed-2878eb4bb5ee
+Accept: application/json
+###
+### Crear un nuevo producto
+POST {{eCommerce.ProductsService.Api_HostAddress}}/api/Product/
+Content-Type: application/json
+{
+  "Name": "Televisor LED SXYYY",
+  "UnitPrice": 899.99,
+  "Category": "Electrónica",
+  "StockQuantity": 100
+}
+###
+### Actualizar un producto existente
+PUT {{eCommerce.ProductsService.Api_HostAddress}}/api/Product/
+Content-Type: application/json
+{
+  "ProductId": "357f46f1-76f0-47dc-98ed-2878eb4bb5ee",
+  "Name": "Televisor LED 4K",
+  "UnitPrice": 999.99,
+  "Category": "Electrónica",
+  "StockQuantity": 80
+}
+###
+### Eliminar un producto por ID
+DELETE {{eCommerce.ProductsService.Api_HostAddress}}/api/Product/357f46f1-76f0-47dc-98ed-2878eb4bb5ee
+Accept: application/json
+###

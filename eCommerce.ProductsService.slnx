@@ -1,6 +1,9 @@
 <Solution>
-  <Project Path="src/eCommerce.ProductsService.Api/eCommerce.ProductsService.Api.csproj" />
-  <Project Path="src/eCommerce.ProductsService.Application/eCommerce.ProductsService.Application.csproj" />
-  <Project Path="src/eCommerce.ProductsService.Domain/eCommerce.ProductsService.Domain.csproj" />
-  <Project Path="src/eCommerce.ProductsService.Infrastructure/eCommerce.ProductsService.Infrastructure.csproj" />
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Project Path="../../../../../../../../Proyectos/VideoStudies/eCommerce.ProductsService/src/eCommerce.ProductsService.Api/eCommerce.ProductsService.Api.csproj" />
+  <Project Path="../../../../../../../../Proyectos/VideoStudies/eCommerce.ProductsService/src/eCommerce.ProductsService.Application/eCommerce.ProductsService.Application.csproj" />
+  <Project Path="../../../../../../../../Proyectos/VideoStudies/eCommerce.ProductsService/src/eCommerce.ProductsService.Domain/eCommerce.ProductsService.Domain.csproj" />
+  <Project Path="../../../../../../../../Proyectos/VideoStudies/eCommerce.ProductsService/src/eCommerce.ProductsService.Infrastructure/eCommerce.ProductsService.Infrastructure.csproj" />
 </Solution>

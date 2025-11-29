@@ -16,8 +16,4 @@
     <ProjectReference Include="..\eCommerce.ProductsService.Application\eCommerce.ProductsService.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Persistence\Context\Configurations\" />
-  </ItemGroup>
-
 </Project>
