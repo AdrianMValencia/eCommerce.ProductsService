@@ -1,0 +1,12 @@
+
+services:
+  mysqlDatabase:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: amechato
+      MYSQL_DATABASE: eCommerceProductsServiceDb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./.containers/database:/var/lib/mysql
+    restart: always  
