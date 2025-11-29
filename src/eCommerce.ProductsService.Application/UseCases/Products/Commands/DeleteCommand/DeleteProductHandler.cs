@@ -25,7 +25,8 @@ internal class DeleteProductHandler(IUnitOfWork unitOfWork)
             }
 
             await _unitOfWork.ProductRepository.DeleteProductAsync(request.ProductId, cancellationToken);
-            
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+
             response.IsSuccess = true;
             response.Message = "Producto eliminado";
             response.Data = true;
