@@ -1,6 +1,7 @@
 ﻿using eCommerce.ProductsService.Application.Abstractions.Messaging;
 using eCommerce.ProductsService.Application.Dtos.Products;
 using eCommerce.ProductsService.Application.UseCases.Products.Commands.CreateCommand;
+using eCommerce.ProductsService.Application.UseCases.Products.Commands.DeleteCommand;
 using eCommerce.ProductsService.Application.UseCases.Products.Commands.UpdateCommand;
 using eCommerce.ProductsService.Application.UseCases.Products.Queries.GetAllProducts;
 using eCommerce.ProductsService.Application.UseCases.Products.Queries.GetProductById;
@@ -49,4 +50,12 @@ public class ProductController(IDispatcher dispatcher) : ControllerBase
         return response.IsSuccess ? Ok(response) : BadRequest(response);
     }
 
+    [HttpDelete("{productId:guid}")]
+    public async Task<IActionResult> DeleteProduct([FromRoute] Guid productId,
+    CancellationToken cancellationToken)
+    {
+        var command = new DeleteProductCommand { ProductId = productId };
+        var response = await _dispatcher.Dispatch<DeleteProductCommand, bool>(command, cancellationToken);
+        return response.IsSuccess ? Ok(response) : BadRequest(response);
+    }
 }
